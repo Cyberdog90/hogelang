@@ -25,7 +25,7 @@ def add_operator():
 
 while True:
     data = list(source)
-    print(data)
+    # print(data)
     if data[pointer] == "(":
         pointer += 1
         continue
@@ -45,7 +45,17 @@ while True:
             else:
                 break
         value_stack.append(int("".join(tmp_value)))
-    break
+        tmp_value = []
+    if data[pointer] == ",":
+        pointer += 1
+        continue
+    if data[pointer] == ")":
+        pointer += 1
+        break
+
+print(value_stack[0], operator_stack[0], value_stack[1])
+"""
 print(pointer)
 print(operator_stack)
 print(value_stack)
+"""
