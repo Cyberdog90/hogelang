@@ -12,7 +12,7 @@ def main():
     with open(filename, "r") as f:
         """
 
-source = "(+;112,2)"
+source = "(+;(+;112,2),2)"
 operator_stack = []
 value_stack = []
 tmp_value = []
@@ -23,8 +23,9 @@ def add_operator():
     pass
 
 
+data = list(source)
 while True:
-    data = list(source)
+
     # print(data)
     if data[pointer] == "(":
         pointer += 1
@@ -51,11 +52,8 @@ while True:
         continue
     if data[pointer] == ")":
         pointer += 1
-        break
+        continue
 
-print(value_stack[0], operator_stack[0], value_stack[1])
-"""
 print(pointer)
 print(operator_stack)
 print(value_stack)
-"""
