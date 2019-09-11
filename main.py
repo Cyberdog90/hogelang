@@ -1,5 +1,6 @@
 import tkinter.filedialog
 import os
+
 """
 def main():
     root = tkinter.Tk()
@@ -11,3 +12,8 @@ def main():
     with open(filename, "r") as f:
         """
 
+source = "+(1,2)"
+
+while True:
+    data = list(source)
+   if 
