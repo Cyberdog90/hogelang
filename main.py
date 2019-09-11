@@ -12,7 +12,7 @@ def main():
     with open(filename, "r") as f:
         """
 
-source = "+(1,2)"
+source = "(+;1,2)"
 operator_stack = []
 pointer = 0
 
@@ -26,5 +26,5 @@ while True:
     print(data)
     if data[pointer] == "+":
         operator_stack.append("+")
-        add_operator()
+
     break
