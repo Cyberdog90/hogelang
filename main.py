@@ -24,6 +24,9 @@ def add_operator():
 while True:
     data = list(source)
     print(data)
+    if data[pointer] == "(":
+        pointer += 1
+        continue
     if data[pointer] == "+":
         operator_stack.append("+")
 
