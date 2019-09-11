@@ -16,4 +16,5 @@ source = "+(1,2)"
 
 while True:
     data = list(source)
-   if 
+    print(data)
+    break
