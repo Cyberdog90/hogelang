@@ -12,7 +12,7 @@ def main():
     with open(filename, "r") as f:
         """
 
-source = "(+;11,2)"
+source = "(+;112,2)"
 operator_stack = []
 value_stack = []
 tmp_value = []
@@ -46,3 +46,6 @@ while True:
                 break
         value_stack.append(int("".join(tmp_value)))
     break
+print(pointer)
+print(operator_stack)
+print(value_stack)
