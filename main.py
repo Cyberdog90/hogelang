@@ -12,8 +12,10 @@ def main():
     with open(filename, "r") as f:
         """
 
-source = "(+;1,2)"
+source = "(+;11,2)"
 operator_stack = []
+value_stack = []
+tmp_value = []
 pointer = 0
 
 
@@ -29,5 +31,18 @@ while True:
         continue
     if data[pointer] == "+":
         operator_stack.append("+")
-
+        pointer += 1
+        continue
+    if data[pointer] == ";":
+        pointer += 1
+        continue
+    if data[pointer].isdecimal():
+        tmp_value.append(data[pointer])
+        while True:
+            pointer += 1
+            if data[pointer].isdecimal():
+                tmp_value.append(data[pointer])
+            else:
+                break
+        value_stack.append(int("".join(tmp_value)))
     break
