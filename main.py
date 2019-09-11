@@ -13,8 +13,18 @@ def main():
         """
 
 source = "+(1,2)"
+operator_stack = []
+pointer = 0
+
+
+def add_operator():
+    pass
+
 
 while True:
     data = list(source)
     print(data)
+    if data[pointer] == "+":
+        operator_stack.append("+")
+        add_operator()
     break
